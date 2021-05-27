@@ -10,14 +10,16 @@ import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: theme.spacing(40),
+    margin: theme.spacing(2),
+    padding: theme.spacing(2),
   },
   media: {
     padding: '4px',
   },
 }));
 
-function MyCard() {
+const MyCard = () => {
   const classes = useStyles();
   return (
     <>
@@ -38,6 +40,6 @@ function MyCard() {
       </Card>
     </>
   );
-}
+};
 
 export default MyCard;

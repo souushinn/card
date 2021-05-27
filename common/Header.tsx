@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
   },
 }));
-function Header() {
+const Header = () => {
   const classes = useStyles();
 
   return (
@@ -44,5 +44,5 @@ function Header() {
       </AppBar>
     </div>
   );
-}
+};
 export default Header;

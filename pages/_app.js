@@ -1,5 +1,6 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
+import { ThemeProvider, StylesProvider } from '@material-ui/styles';
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -16,9 +17,11 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <Container>
-        <Component {...pageProps} />
-      </Container>
+      <StylesProvider>
+        <ThemeProvider>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </StylesProvider>
     );
   }
 }

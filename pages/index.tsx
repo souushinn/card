@@ -1,12 +1,12 @@
 import React from 'react';
 import TopPage from '../components/index';
 
-function HomePage() {
+const HomePage = () => {
   return (
     <>
       <TopPage />
     </>
   );
-}
+};
 
 export default HomePage;
