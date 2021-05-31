@@ -5,12 +5,12 @@ import {
   CardContent,
   Typography,
   makeStyles,
+  Theme,
 } from '@material-ui/core';
 import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: theme.spacing(40),
     margin: theme.spacing(2),
     padding: theme.spacing(2),
   },

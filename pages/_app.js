@@ -1,6 +1,6 @@
 import React from 'react';
 import App from 'next/app';
-import { ThemeProvider, StylesProvider } from '@material-ui/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -12,16 +12,20 @@ export default class MyApp extends App {
 
     return { pageProps };
   }
-
+  componentDidMount() {
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentNode.removeChild(jssStyles);
+    }
+  }
   render() {
     const { Component, pageProps } = this.props;
 
     return (
-      <StylesProvider>
-        <ThemeProvider>
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </StylesProvider>
+      <>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </>
     );
   }
 }

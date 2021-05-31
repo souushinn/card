@@ -9,4 +9,8 @@ const HomePage = () => {
   );
 };
 
+HomePage.getInitialProps = async () => {
+  return {};
+};
+
 export default HomePage;

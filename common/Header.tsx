@@ -10,7 +10,7 @@ import {
 import React from 'react';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
